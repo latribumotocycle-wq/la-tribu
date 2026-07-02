@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Tribu MotoBike - Catálogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>LA TRIBU 🚲</h1>
+        <p>Bicicletas • Accesorios • Estilo libre</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html" class="active">Catálogo</a>
+        <a href="javascript:void(0)" onclick="mostrarCarrito()">🛒 Carrito</a>
+        <a href="javascript:void(0)" onclick="mostrarPago()">💳 Pagar</a>
+        <a href="index.html#contacto">Contacto</a>
+    </nav>
+
+    <div class="container">
+        <h2>Nuestro Catálogo Completo</h2>
+
+        <div class="catalogo" id="catalogo">
+            <!-- Los productos se cargarán aquí con JavaScript -->
+        </div>
+    </div>
+
+    <!-- CARRITO -->
+    <div class="carrito-container" id="carritoContainer">
+        <div class="container">
+            <h2>Tu Carrito de Compras 🛒</h2>
+            <div class="carrito-items" id="carritoItems">
+                <p class="carrito-vacio">El carrito está vacío</p>
+            </div>
+            <div class="carrito-resumen" id="carritoResumen" style="display:none;">
+                <p>Subtotal: <span id="subtotal">$0</span></p>
+                <p>Envío: <span id="envio">$0</span></p>
+                <p class="carrito-total">Total: <span id="total">$0</span></p>
+                <button class="btn" onclick="mostrarPago()" style="margin-top:20px;">Proceder al Pago</button>
+                <button class="btn btn-secondary" onclick="mostrarCatalogo()" style="margin-top:10px;">Seguir Comprando</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGO -->
+    <div class="pago-container" id="pagoContainer">
+        <div class="container">
+            <h2>Formulario de Pago 💳</h2>
+            <div class="formulario-pago">
+                <div class="resumen-pago" id="resumenPago">
+                    <p>Subtotal: <span id="pagoSubtotal">$0</span></p>
+                    <p>Envío: <span id="pagoEnvio">$0</span></p>
+                    <p class="total">Total a Pagar: <span id="pagoTotal">$0</span></p>
+                </div>
+
+                <form id="formPago">
+                    <h3 style="color: #ff6b00; margin-bottom: 15px;">Método de Pago</h3>
+                    <div class="metodo-pago">
+                        <input type="radio" id="mp" name="metodo" value="mercadopago" checked>
+                        <label for="mp">💳 Mercado Pago</label>
+                        
+                        <input type="radio" id="tf" name="metodo" value="transferencia">
+                        <label for="tf">🏦 Transferencia</label>
+                        
+                        <input type="radio" id="efectivo" name="metodo" value="efectivo">
+                        <label for="efectivo">💵 Efectivo</label>
+                    </div>
+
+                    <h3 style="color: #ff6b00; margin-bottom: 15px;">Datos Personales</h3>
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono/WhatsApp *</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+
+                    <h3 style="color: #ff6b00; margin-bottom: 15px;">Dirección de Envío</h3>
+
+                    <div class="form-group">
+                        <label for="direccion">Dirección *</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ciudad">Ciudad *</label>
+                            <input type="text" id="ciudad" name="ciudad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cp">Código Postal *</label>
+                            <input type="text" id="cp" name="cp" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="provincia">Provincia *</label>
+                        <input type="text" id="provincia" name="provincia" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notas">Notas (opcional)</label>
+                        <input type="text" id="notas" name="notas" placeholder="Indicaciones especiales de entrega...">
+                    </div>
+
+                    <h3 style="color: #ff6b00; margin-bottom: 15px;" id="datosTarjeta" style="display:none;">Datos de la Tarjeta</h3>
+
+                    <div id="formularioTarjeta" style="display:none;">
+                        <div class="form-group">
+                            <label for="titular">Titular de la Tarjeta</label>
+                            <input type="text" id="titular" name="titular">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numerotarjeta">Número de Tarjeta</label>
+                            <input type="text" id="numerotarjeta" name="numerotarjeta" placeholder="1234 5678 9012 3456" maxlength="19">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="vencimiento">Vencimiento (MM/AA)</label>
+                                <input type="text" id="vencimiento" name="vencimiento" placeholder="12/25" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn" style="margin-top:20px; background:#00b894;">✓ Confirmar Compra</button>
+                    <button type="button" class="btn btn-secondary" onclick="mostrarCarrito()" style="margin-top:10px;">Volver al Carrito</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>La Tribu MotoBike</h3>
+        <p>🚲 Tu tienda de bicicletas de confianza</p>
+        <div class="contacto-links">
+            <a href="https://wa.me/5491234567890" target="_blank">📱 WhatsApp</a>
+            <a href="mailto:contacto@latribu.com">📧 Email</a>
+            <a href="#">📍 Ubicación</a>
+        </div>
+        <p style="margin-top: 20px; color: #666;">© 2024 La Tribu MotoBike. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // ====== DATOS DE PRODUCTOS ======
+        const productos = [
+            {
+                id: 1,
+                nombre: "BMX Freestyle XPro",
+                imagen: "🚲",
+                precio: 15000,
+                descripcion: "La bicicleta perfecta para trucos y acrobacias",
+                specs: "20 pulgadas • Acero reforzado • Llantas resistentes"
+            },
+            {
+                id: 2,
+                nombre: "Mountain Bike Trail 500",
+                imagen: "🚵",
+                precio: 28000,
+                descripcion: "Excelente para terrenos difíciles y montaña",
+                specs: "26 pulgadas • Suspensión delantera • 21 velocidades"
+            },
+            {
+                id: 3,
+                nombre: "Bicicleta Urbana Classic",
+                imagen: "🚴",
+                precio: 12000,
+                descripcion: "Cómoda y elegante para el día a día",
+                specs: "28 pulgadas • Cambios suaves • Muy ligera"
+            },
+            {
+                id: 4,
+                nombre: "BMX Pro Racing",
+                imagen: "🚲",
+                precio: 18000,
+                descripcion: "Diseñada para competiciones y velocidad",
+                specs: "20 pulgadas • Peso ultra ligero • Aerodinámico"
+            },
+            {
+                id: 5,
+                nombre: "Bici Eléctrica EcoDrive",
+                imagen: "⚡🚲",
+                precio: 45000,
+                descripcion: "Tecnología eléctrica para mayor alcance",
+                specs: "Batería 50km • Motor silencioso • Carga rápida"
+            },
+            {
+                id: 6,
+                nombre: "Bicicleta Niños Colorida",
+                imagen: "🎨",
+                precio: 8000,
+                descripcion: "Segura y divertida para los más pequeños",
+                specs: "16 pulgadas • Ruedas estabilizadoras • Colores vivos"
+            }
+        ];
+
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+        // ====== CARGAR CATÁLOGO ======
+        function cargarCatalogo() {
+            const catalogo = document.getElementById('catalogo');
+            catalogo.innerHTML = '';
+            
+            productos.forEach(producto => {
+                const productoHTML = `
+                    <div class="producto">
+                        <div class="producto-imagen">${producto.imagen}</div>
+                        <div class="producto-info">
+                            <h3>${producto.nombre}</h3>
+                            <p>${producto.descripcion}</p>
+                            <div class="producto-especificaciones">
+                                ${producto.specs}
+                            </div>
+                            <div class="producto-precio">$${producto.precio.toLocaleString()}</div>
+                            <button class="btn" onclick="agregarAlCarrito(${producto.id})">Agregar al Carrito</button>
+                        </div>
+                    </div>
+                `;
+                catalogo.innerHTML += productoHTML;
+            });
+        }
+
+        // ====== CARRITO ======
+        function agregarAlCarrito(productoId) {
+            const producto = productos.find(p => p.id === productoId);
+            const itemCarrito = carrito.find(i => i.id === productoId);
+
+            if (itemCarrito) {
+                itemCarrito.cantidad += 1;
+            } else {
+                carrito.push({
+                    id: producto.id,
+                    nombre: producto.nombre,
+                    precio: producto.precio,
+                    cantidad: 1
+                });
+            }
+
+            guardarCarrito();
+            actualizarCarrito();
+            alert(`✓ ${producto.nombre} agregado al carrito`);
+        }
+
+        function guardarCarrito() {
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+        }
+
+        function actualizarCarrito() {
+            const carritoItems = document.getElementById('carritoItems');
+            const carritoResumen = document.getElementById('carritoResumen');
+
+            if (carrito.length === 0) {
+                carritoItems.innerHTML = '<p class="carrito-vacio">El carrito está vacío</p>';
+                carritoResumen.style.display = 'none';
+                return;
+            }
+
+            let html = '';
+            let subtotal = 0;
+
+            carrito.forEach(item => {
+                const subtotalItem = item.precio * item.cantidad;
+                subtotal += subtotalItem;
+
+                html += `
+                    <div class="carrito-item">
+                        <div class="carrito-item-info">
+                            <h4>${item.nombre}</h4>
+                            <p>$${item.precio.toLocaleString()} c/u</p>
+                        </div>
+                        <div class="carrito-item-cantidad">
+                            <button onclick="cambiarCantidad(${item.id}, -1)">−</button>
+                            <input type="number" value="${item.cantidad}" readonly>
+                            <button onclick="cambiarCantidad(${item.id}, 1)">+</button>
+                        </div>
+                        <div style="text-align: right;">
+                            <p style="color: #ff6b00; font-weight: bold;">$${subtotalItem.toLocaleString()}</p>
+                            <button class="carrito-item-eliminar" onclick="eliminarDelCarrito(${item.id})">Eliminar</button>
+                        </div>
+                    </div>
+                `;
+            });
+
+            carritoItems.innerHTML = html;
+            carritoResumen.style.display = 'block';
+
+            const envio = 0;
+            const total = subtotal + envio;
+
+            document.getElementById('subtotal').textContent = '$' + subtotal.toLocaleString();
+            document.getElementById('envio').textContent = '$' + envio.toLocaleString();
+            document.getElementById('total').textContent = '$' + total.toLocaleString();
+
+            actualizarResumenPago(subtotal, envio, total);
+        }
+
+        function cambiarCantidad(id, cambio) {
+            const item = carrito.find(i => i.id === id);
+            if (item) {
+                item.cantidad += cambio;
+                if (item.cantidad <= 0) {
+                    eliminarDelCarrito(id);
+                } else {
+                    guardarCarrito();
+                    actualizarCarrito();
+                }
+            }
+        }
+
+        function eliminarDelCarrito(id) {
+            carrito = carrito.filter(i => i.id !== id);
+            guardarCarrito();
+            actualizarCarrito();
+        }
+
+        // ====== PAGO ======
+        function actualizarResumenPago(subtotal, envio, total) {
+            document.getElementById('pagoSubtotal').textContent = '$' + subtotal.toLocaleString();
+            document.getElementById('pagoEnvio').textContent = '$' + envio.toLocaleString();
+            document.getElementById('pagoTotal').textContent = '$' + total.toLocaleString();
+        }
+
+        document.addEventListener('change', function(e) {
+            if (e.target.name === 'metodo') {
+                const formularioTarjeta = document.getElementById('formularioTarjeta');
+                if (e.target.value === 'mercadopago') {
+                    formularioTarjeta.style.display = 'block';
+                } else {
+                    formularioTarjeta.style.display = 'none';
+                }
+            }
+        });
+
+        document.getElementById('formPago').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const metodo = document.querySelector('input[name="metodo"]:checked').value;
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const direccion = document.getElementById('direccion').value;
+            const ciudad = document.getElementById('ciudad').value;
+
+            if (!nombre || !email || !telefono || !direccion || !ciudad) {
+                alert('Por favor completa todos los campos obligatorios');
+                return;
+            }
+
+            let mensaje = `*NUEVA COMPRA DE LA TRIBU* 🎉\n\n`;
+            mensaje += `*Cliente:* ${nombre}\n`;
+            mensaje += `*Email:* ${email}\n`;
+            mensaje += `*Teléfono:* ${telefono}\n`;
+            mensaje += `*Dirección:* ${direccion}, ${ciudad}\n`;
+            mensaje += `*Método de Pago:* ${metodo}\n\n`;
+            mensaje += `*Productos:*\n`;
+
+            carrito.forEach(item => {
+                mensaje += `• ${item.nombre} x${item.cantidad} = $${(item.precio * item.cantidad).toLocaleString()}\n`;
+            });
+
+            const total = document.getElementById('pagoTotal').textContent;
+            mensaje += `\n*TOTAL: ${total}*`;
+
+            const numeroWhatsApp = '5491234567890'; // Cambiar por tu número
+            const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+
+            window.open(urlWhatsApp, '_blank');
+
+            alert('✓ Compra enviada a WhatsApp. Te contactaremos pronto.');
+            carrito = [];
+            guardarCarrito();
+            mostrarCatalogo();
+        });
+
+        // ====== NAVEGACIÓN ======
+        function mostrarCatalogo() {
+            document.getElementById('catalogo').parentElement.parentElement.style.display = 'block';
+            document.getElementById('carritoContainer').style.display = 'none';
+            document.getElementById('pagoContainer').style.display = 'none';
+        }
+
+        function mostrarCarrito() {
+            document.getElementById('catalogo').parentElement.parentElement.style.display = 'none';
+            document.getElementById('carritoContainer').style.display = 'block';
+            document.getElementById('pagoContainer').style.display = 'none';
+            actualizarCarrito();
+        }
+
+        function mostrarPago() {
+            if (carrito.length === 0) {
+                alert('El carrito está vacío. Agrega productos primero.');
+                return;
+            }
+            document.getElementById('catalogo').parentElement.parentElement.style.display = 'none';
+            document.getElementById('carritoContainer').style.display = 'none';
+            document.getElementById('pagoContainer').style.display = 'block';
+        }
+
+        // ====== INICIALIZAR ======
+        cargarCatalogo();
+        actualizarCarrito();
+    </script>
+</body>
+</html>

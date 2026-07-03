@@ -42,16 +42,19 @@ header {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    gap: 20px;
 }
 
 .header-left {
     flex: 0 0 auto;
+    min-width: 80px;
 }
 
 .logo {
-    height: 80px;
+    height: 70px;
     width: auto;
     object-fit: contain;
+    display: block;
 }
 
 .header-search {
@@ -67,7 +70,7 @@ header {
     padding: 12px 15px;
     border: 2px solid var(--primary);
     border-radius: 5px;
-    background: rgba(255, 107, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
     color: white;
     font-size: 1em;
 }
@@ -78,7 +81,7 @@ header {
 
 .search-input:focus {
     outline: none;
-    background: rgba(255, 107, 0, 0.2);
+    background: rgba(255, 255, 255, 0.15);
     border-color: var(--orange);
 }
 
@@ -200,6 +203,8 @@ nav a:hover, nav a.active {
     color: white !important;
     padding: 15px 40px !important;
     font-size: 1.1em !important;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn-primary:hover {
@@ -270,7 +275,8 @@ h2 {
     color: white !important;
     padding: 10px 20px !important;
     font-size: 0.95em !important;
-    display: inline-block;
+    display: inline-block !important;
+    text-decoration: none !important;
 }
 
 .btn-small:hover {
@@ -372,6 +378,8 @@ h2 {
     transition: all 0.3s;
     width: 100%;
     font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .btn:hover {
@@ -380,14 +388,14 @@ h2 {
 }
 
 .btn-secondary {
-    background: rgba(255, 107, 0, 0.2);
-    color: var(--primary);
-    border: 2px solid var(--primary);
+    background: rgba(255, 107, 0, 0.2) !important;
+    color: var(--primary) !important;
+    border: 2px solid var(--primary) !important;
 }
 
 .btn-secondary:hover {
-    background: var(--primary);
-    color: white;
+    background: var(--primary) !important;
+    color: white !important;
 }
 
 .btn-large {
@@ -571,5 +579,13 @@ footer p {
 
     .contacto-links {
         flex-direction: column;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2em;
     }
 }

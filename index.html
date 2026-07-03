@@ -3,104 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Tribu MotoBike</title>
+    <title>La Tribu MotoBike - Inicio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>LA TRIBU 🚲</h1>
-        <p>Bicicletas • Accesorios • Estilo libre</p>
+        <div class="header-content">
+            <img src="logo.png" alt="Logo La Tribu" class="logo" onerror="this.style.display='none'">
+            <div class="header-text">
+                <h1>LA TRIBU 🚲</h1>
+                <p>Bicicletas • Accesorios • Estilo libre</p>
+            </div>
+        </div>
     </header>
 
     <nav>
         <a href="index.html" class="active">🏠 Inicio</a>
         <a href="catalogo.html">📦 Catálogo</a>
-        <a href="catalogo.html#carrito">🛒 Carrito</a>
+        <a href="catalogo.html">🛒 Carrito</a>
         <a href="#contacto">📞 Contacto</a>
     </nav>
 
     <div class="container">
-        <h2>Bienvenido a La Tribu</h2>
+        <!-- SECCIÓN HERO/BIENVENIDA -->
+        <section class="hero-section">
+            <h2>Bienvenido a La Tribu</h2>
+            <p class="hero-subtitle">Tu tienda de confianza para bicicletas de calidad</p>
+            <a href="catalogo.html" class="btn btn-large">📦 Ver Catálogo Completo</a>
+        </section>
 
-        <div class="catalogo" style="margin-bottom: 50px;">
-            <div class="producto">
-                <div class="producto-imagen">🚲</div>
-                <div class="producto-info">
-                    <h3>BMX Freestyle XPro</h3>
-                    <p>Perfecta para trucos y acrobacias en la calle</p>
-                    <div class="producto-especificaciones">
-                        20 pulgadas • Acero reforzado • Muy resistente
+        <!-- DESTACADOS -->
+        <section class="destacados">
+            <h2>Nuestros Destacados 🌟</h2>
+            <div class="catalogo">
+                <div class="producto">
+                    <div class="producto-imagen">🚲</div>
+                    <div class="producto-info">
+                        <h3>BMX Freestyle XPro</h3>
+                        <p>Perfecta para trucos y acrobacias en la calle</p>
+                        <div class="producto-especificaciones">
+                            20 pulgadas • Acero reforzado • Muy resistente
+                        </div>
+                        <div class="producto-precio">$15.000</div>
+                        <a href="catalogo.html" class="btn">Ver en Catálogo</a>
                     </div>
-                    <div class="producto-precio">$15.000</div>
-                    <a href="catalogo.html" class="btn">Ver en Catálogo</a>
+                </div>
+
+                <div class="producto">
+                    <div class="producto-imagen">🚵</div>
+                    <div class="producto-info">
+                        <h3>Mountain Bike Trail 500</h3>
+                        <p>Excelente para terrenos difíciles y montaña</p>
+                        <div class="producto-especificaciones">
+                            26 pulgadas • Suspensión • 21 velocidades
+                        </div>
+                        <div class="producto-precio">$28.000</div>
+                        <a href="catalogo.html" class="btn">Ver en Catálogo</a>
+                    </div>
+                </div>
+
+                <div class="producto">
+                    <div class="producto-imagen">🚴</div>
+                    <div class="producto-info">
+                        <h3>Bicicleta Urbana Classic</h3>
+                        <p>Cómoda y elegante para el día a día</p>
+                        <div class="producto-especificaciones">
+                            28 pulgadas • Cambios suaves • Muy ligera
+                        </div>
+                        <div class="producto-precio">$12.000</div>
+                        <a href="catalogo.html" class="btn">Ver en Catálogo</a>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="producto">
-                <div class="producto-imagen">🚵</div>
-                <div class="producto-info">
-                    <h3>Mountain Bike Trail 500</h3>
-                    <p>Excelente para terrenos difíciles y montaña</p>
-                    <div class="producto-especificaciones">
-                        26 pulgadas • Suspensión • 21 velocidades
-                    </div>
-                    <div class="producto-precio">$28.000</div>
-                    <a href="catalogo.html" class="btn">Ver en Catálogo</a>
-                </div>
-            </div>
-
-            <div class="producto">
-                <div class="producto-imagen">🚴</div>
-                <div class="producto-info">
-                    <h3>Bicicleta Urbana Classic</h3>
-                    <p>Cómoda y elegante para el día a día</p>
-                    <div class="producto-especificaciones">
-                        28 pulgadas • Cambios suaves • Muy ligera
-                    </div>
-                    <div class="producto-precio">$12.000</div>
-                    <a href="catalogo.html" class="btn">Ver en Catálogo</a>
-                </div>
-            </div>
-        </div>
-
-        <section style="background: rgba(255, 107, 0, 0.1); padding: 40px; border-radius: 10px; border-left: 4px solid #ff6b00; margin: 50px 0;">
-            <h2 style="color: #ff6b00; margin-bottom: 20px;">¿Por qué elegir La Tribu? ✨</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                <div style="background: rgba(255, 107, 0, 0.05); padding: 20px; border-radius: 8px;">
-                    <h3 style="color: #ff6b00; margin-bottom: 10px;">🏆 Calidad Premium</h3>
+        <!-- POR QUÉ ELEGIR LA TRIBU -->
+        <section class="por-que-section">
+            <h2>¿Por qué elegir La Tribu? ✨</h2>
+            <div class="caracteristicas">
+                <div class="caracteristica">
+                    <div class="caracteristica-icon">🏆</div>
+                    <h3>Calidad Premium</h3>
                     <p>Todas nuestras bicicletas son de primera calidad con garantía</p>
                 </div>
-                <div style="background: rgba(255, 107, 0, 0.05); padding: 20px; border-radius: 8px;">
-                    <h3 style="color: #ff6b00; margin-bottom: 10px;">💰 Mejores Precios</h3>
+                <div class="caracteristica">
+                    <div class="caracteristica-icon">💰</div>
+                    <h3>Mejores Precios</h3>
                     <p>Ofrecemos los mejores precios del mercado sin comprometer la calidad</p>
                 </div>
-                <div style="background: rgba(255, 107, 0, 0.05); padding: 20px; border-radius: 8px;">
-                    <h3 style="color: #ff6b00; margin-bottom: 10px;">🚚 Envío Rápido</h3>
+                <div class="caracteristica">
+                    <div class="caracteristica-icon">🚚</div>
+                    <h3>Envío Rápido</h3>
                     <p>Entrega rápida a toda la región con seguimiento en tiempo real</p>
                 </div>
-                <div style="background: rgba(255, 107, 0, 0.05); padding: 20px; border-radius: 8px;">
-                    <h3 style="color: #ff6b00; margin-bottom: 10px;">📱 Atención 24/7</h3>
+                <div class="caracteristica">
+                    <div class="caracteristica-icon">📱</div>
+                    <h3>Atención 24/7</h3>
                     <p>Soporte por WhatsApp disponible todos los días de la semana</p>
                 </div>
-                <div style="background: rgba(255, 107, 0, 0.05); padding: 20px; border-radius: 8px;">
-                    <h3 style="color: #ff6b00; margin-bottom: 10px;">🛡️ Garantía</h3>
+                <div class="caracteristica">
+                    <div class="caracteristica-icon">🛡️</div>
+                    <h3>Garantía</h3>
                     <p>Garantía de satisfacción del cliente y devoluciones sin problema</p>
                 </div>
-                <div style="background: rgba(255, 107, 0, 0.05); padding: 20px; border-radius: 8px;">
-                    <h3 style="color: #ff6b00; margin-bottom: 10px;">🎯 Variedad</h3>
+                <div class="caracteristica">
+                    <div class="caracteristica-icon">🎯</div>
+                    <h3>Variedad</h3>
                     <p>Amplio catálogo con modelos para todos los gustos y necesidades</p>
                 </div>
             </div>
         </section>
 
-        <section style="margin: 50px 0; text-align: center;">
-            <h2 style="margin-bottom: 30px;">Catálogo Completo</h2>
-            <p style="font-size: 1.1em; color: #aaa; margin-bottom: 30px;">
-                Explora nuestro catálogo completo con 6+ modelos diferentes de bicicletas para todas las edades y niveles
-            </p>
-            <a href="catalogo.html" class="btn" style="max-width: 300px; margin: 0 auto;">
-                📦 Ver Catálogo Completo
-            </a>
+        <!-- CTA - CATÁLOGO COMPLETO -->
+        <section class="cta-section">
+            <h2>Catálogo Completo</h2>
+            <p>Explora nuestro catálogo completo con 6+ modelos diferentes de bicicletas para todas las edades y niveles</p>
+            <a href="catalogo.html" class="btn btn-large">📦 Ver Catálogo Completo</a>
         </section>
     </div>
 
@@ -108,10 +126,17 @@
         <h3>La Tribu MotoBike 🚲</h3>
         <p>Tu tienda de bicicletas de confianza</p>
         
-        <div style="margin: 20px 0; padding: 20px; background: rgba(255, 107, 0, 0.1); border-radius: 8px;">
-            <h4 style="color: #ff6b00; margin-bottom: 10px;">📍 Ubicación</h4>
-            <p>Zona Centro • Ciudad</p>
-            <p style="color: #aaa; font-size: 0.9em;">Contáctanos para conocer nuestra dirección exacta</p>
+        <div class="footer-info">
+            <div class="footer-section">
+                <h4>📍 Ubicación</h4>
+                <p>Zona Centro • Ciudad</p>
+                <p style="color: #aaa; font-size: 0.9em;">Contáctanos para conocer nuestra dirección exacta</p>
+            </div>
+            <div class="footer-section">
+                <h4>⏰ Horarios</h4>
+                <p>Lunes a Viernes: 9:00 - 18:00</p>
+                <p>Sábados: 10:00 - 17:00</p>
+            </div>
         </div>
 
         <div class="contacto-links">
@@ -120,7 +145,7 @@
             <a href="tel:+5491234567890">☎️ Llamar</a>
         </div>
 
-        <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #333;">
+        <div class="footer-bottom">
             <p style="color: #666; font-size: 0.9em;">© 2024 La Tribu MotoBike. Todos los derechos reservados.</p>
             <p style="color: #666; font-size: 0.85em; margin-top: 10px;">Desarrollado con ❤️ para los amantes de las bicicletas</p>
         </div>

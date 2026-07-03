@@ -3,89 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Tribu MotoBike - Motos y Bicicletas</title>
+    <title>La Tribu MotoBike</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- HEADER CON LOGO Y BÚSQUEDA -->
+    <!-- HEADER -->
     <header>
-        <div class="header-top">
-            <div class="header-left">
-                <img src="logo.png" alt="Logo La Tribu MotoBike" class="logo">
+        <div class="header-content">
+            <img src="logo.png" alt="Logo La Tribu MotoBike" class="logo">
+            <div class="header-info">
+                <h1>LA TRIBU</h1>
             </div>
-            <div class="header-search">
-                <input type="text" placeholder="Buscar 🔍" class="search-input">
-                <button class="search-btn">🔍</button>
-            </div>
-        </div>
-        
-        <div class="header-bottom">
-            <h1>LA TRIBU MotoBike</h1>
-            <p>Tu tienda de confianza para motos y bicicletas</p>
         </div>
     </header>
 
     <!-- NAVEGACIÓN -->
     <nav>
         <a href="index.html" class="active">Inicio</a>
-        <a href="#motos">🏍 Motos</a>
-        <a href="#bicis">🚲 Bicis</a>
-        <a href="#accesorios">🪖 Accesorios</a>
-        <a href="#contacto">📞 Contacto</a>
+        <a href="#motos">Motos</a>
+        <a href="#bicis">Bicis</a>
+        <a href="#accesorios">Accesorios</a>
+        <a href="#contacto">Contacto</a>
     </nav>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
-            <h2 class="hero-title">TODO PARA TU<br>PRÓXIMA AVENTURA</h2>
-            <p class="hero-subtitle">Motos • Bicicletas • Accesorios</p>
+            <h2>TODO PARA TU<br>PRÓXIMA AVENTURA</h2>
+            <p>Motos • Bicicletas • Accesorios</p>
             <div class="hero-buttons">
-                <a href="#motos" class="btn btn-primary">🏍 VER MOTOS</a>
-                <a href="#bicis" class="btn btn-secondary">🚲 VER BICICLETAS</a>
+                <a href="#motos" class="btn btn-primary">MOTOS</a>
+                <a href="#bicis" class="btn btn-secondary">BICIS</a>
             </div>
         </div>
     </section>
 
-    <!-- CATEGORÍAS -->
     <div class="container">
+        <!-- CATEGORÍAS -->
         <section class="categorias-section">
             <h2>CATEGORÍAS</h2>
             <div class="categorias">
                 <div class="categoria-card" id="motos">
-                    <div class="categoria-icon">🏍</div>
+                    <span class="categoria-icon">🏍</span>
                     <h3>MOTOS</h3>
-                    <p>Modelos de alta potencia y rendimiento</p>
-                    <a href="#motos-catalogo" class="btn btn-small">Ver Motos →</a>
                 </div>
                 <div class="categoria-card" id="bicis">
-                    <div class="categoria-icon">🚲</div>
-                    <h3>BICICLETAS</h3>
-                    <p>Para todos los estilos y terrenos</p>
-                    <a href="catalogo.html" class="btn btn-small">Ver Bicis →</a>
+                    <span class="categoria-icon">🚲</span>
+                    <h3>BICIS</h3>
                 </div>
                 <div class="categoria-card" id="accesorios">
-                    <div class="categoria-icon">🪖</div>
+                    <span class="categoria-icon">🪖</span>
                     <h3>ACCESORIOS</h3>
-                    <p>Equipo de seguridad y complementos</p>
-                    <a href="#accesorios-catalogo" class="btn btn-small">Ver Accesorios →</a>
                 </div>
             </div>
         </section>
 
         <!-- NOVEDADES -->
         <section class="novedades-section">
-            <h2>🔥 NOVEDADES</h2>
+            <h2>NOVEDADES</h2>
             <div class="catalogo">
                 <div class="producto">
                     <div class="producto-imagen">🏍</div>
                     <div class="producto-info">
                         <h3>Moto Sport XR1</h3>
-                        <p>Potencia y velocidad en una sola máquina</p>
-                        <div class="producto-especificaciones">
-                            200cc • Motor de 4 tiempos • Diseño deportivo
-                        </div>
+                        <p>Potencia y velocidad</p>
                         <div class="producto-precio">$85.000</div>
-                        <button class="btn">Conocer Más</button>
+                        <button class="btn">Conocer</button>
                     </div>
                 </div>
 
@@ -93,25 +76,19 @@
                     <div class="producto-imagen">🏍</div>
                     <div class="producto-info">
                         <h3>Moto Clásica Retro</h3>
-                        <p>Estilo vintage con tecnología moderna</p>
-                        <div class="producto-especificaciones">
-                            150cc • Suspensión dual • Cromo y cuero
-                        </div>
+                        <p>Estilo vintage moderno</p>
                         <div class="producto-precio">$65.000</div>
-                        <button class="btn">Conocer Más</button>
+                        <button class="btn">Conocer</button>
                     </div>
                 </div>
 
                 <div class="producto">
                     <div class="producto-imagen">🚲</div>
                     <div class="producto-info">
-                        <h3>Mountain Bike Trail 500</h3>
-                        <p>Excelente para terrenos difíciles</p>
-                        <div class="producto-especificaciones">
-                            26 pulgadas • Suspensión • 21 velocidades
-                        </div>
+                        <h3>Mountain Bike Trail</h3>
+                        <p>Para terrenos difíciles</p>
                         <div class="producto-precio">$28.000</div>
-                        <a href="catalogo.html" class="btn">Ver en Catálogo</a>
+                        <a href="catalogo.html" class="btn">Ver</a>
                     </div>
                 </div>
 
@@ -119,12 +96,9 @@
                     <div class="producto-imagen">🪖</div>
                     <div class="producto-info">
                         <h3>Casco Integral Pro</h3>
-                        <p>Máxima protección y comodidad</p>
-                        <div class="producto-especificaciones">
-                            Certificado DOT • Visera anti-UV • Ventilación
-                        </div>
+                        <p>Máxima protección</p>
                         <div class="producto-precio">$12.000</div>
-                        <button class="btn">Conocer Más</button>
+                        <button class="btn">Conocer</button>
                     </div>
                 </div>
 
@@ -132,63 +106,51 @@
                     <div class="producto-imagen">🧤</div>
                     <div class="producto-info">
                         <h3>Guantes Moto Racing</h3>
-                        <p>Protección con estilo y confort</p>
-                        <div class="producto-especificaciones">
-                            Cuero reforzado • Palma antideslizante • Talla S-XL
-                        </div>
+                        <p>Protección con estilo</p>
                         <div class="producto-precio">$4.500</div>
-                        <button class="btn">Conocer Más</button>
+                        <button class="btn">Conocer</button>
                     </div>
                 </div>
 
                 <div class="producto">
                     <div class="producto-imagen">🚴</div>
                     <div class="producto-info">
-                        <h3>Bicicleta Urbana Classic</h3>
-                        <p>Cómoda y elegante para el día a día</p>
-                        <div class="producto-especificaciones">
-                            28 pulgadas • Cambios suaves • Muy ligera
-                        </div>
+                        <h3>Bicicleta Urbana</h3>
+                        <p>Para el día a día</p>
                         <div class="producto-precio">$12.000</div>
-                        <a href="catalogo.html" class="btn">Ver en Catálogo</a>
+                        <a href="catalogo.html" class="btn">Ver</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- POR QUÉ ELEGIR LA TRIBU -->
+        <!-- POR QUÉ -->
         <section class="por-que-section">
-            <h2>¿Por qué elegir La Tribu? ✨</h2>
+            <h2>¿POR QUÉ LA TRIBU?</h2>
             <div class="caracteristicas">
                 <div class="caracteristica">
                     <div class="caracteristica-icon">🏆</div>
-                    <h3>Calidad Premium</h3>
-                    <p>Todos nuestros productos son de primera calidad con garantía</p>
+                    <h3>Calidad</h3>
                 </div>
                 <div class="caracteristica">
                     <div class="caracteristica-icon">💰</div>
-                    <h3>Mejores Precios</h3>
-                    <p>Ofrecemos los mejores precios del mercado sin comprometer calidad</p>
+                    <h3>Precios</h3>
                 </div>
                 <div class="caracteristica">
                     <div class="caracteristica-icon">🚚</div>
-                    <h3>Envío Rápido</h3>
-                    <p>Entrega rápida a toda la región con seguimiento en tiempo real</p>
+                    <h3>Envío</h3>
                 </div>
                 <div class="caracteristica">
                     <div class="caracteristica-icon">📱</div>
-                    <h3>Atención 24/7</h3>
-                    <p>Soporte por WhatsApp disponible todos los días de la semana</p>
+                    <h3>Soporte</h3>
                 </div>
                 <div class="caracteristica">
                     <div class="caracteristica-icon">🛡️</div>
                     <h3>Garantía</h3>
-                    <p>Garantía de satisfacción del cliente y devoluciones sin problema</p>
                 </div>
                 <div class="caracteristica">
                     <div class="caracteristica-icon">🎯</div>
                     <h3>Variedad</h3>
-                    <p>Amplio catálogo con modelos para todos los gustos y necesidades</p>
                 </div>
             </div>
         </section>
@@ -196,32 +158,15 @@
 
     <!-- FOOTER -->
     <footer id="contacto">
-        <h3>La Tribu MotoBike 🏍 🚲</h3>
-        <p>Tu tienda de confianza para motos, bicicletas y accesorios</p>
+        <h3>LA TRIBU MOTOBIKE</h3>
         
-        <div class="footer-info">
-            <div class="footer-section">
-                <h4>📍 Ubicación</h4>
-                <p>Zona Centro • Ciudad</p>
-                <p style="color: #aaa; font-size: 0.9em;">Contáctanos para conocer nuestra dirección exacta</p>
-            </div>
-            <div class="footer-section">
-                <h4>⏰ Horarios</h4>
-                <p>Lunes a Viernes: 9:00 - 18:00</p>
-                <p>Sábados: 10:00 - 17:00</p>
-            </div>
-        </div>
-
         <div class="contacto-links">
-            <a href="https://wa.me/5491234567890" target="_blank">📱 WhatsApp</a>
-            <a href="mailto:contacto@latribu.com">📧 Email</a>
-            <a href="tel:+5491234567890">☎️ Llamar</a>
+            <a href="https://wa.me/5491234567890" target="_blank">WhatsApp</a>
+            <a href="mailto:contacto@latribu.com">Email</a>
+            <a href="tel:+5491234567890">Llamar</a>
         </div>
 
-        <div class="footer-bottom">
-            <p style="color: #666; font-size: 0.9em;">© 2024 La Tribu MotoBike. Todos los derechos reservados.</p>
-            <p style="color: #666; font-size: 0.85em; margin-top: 10px;">Desarrollado con ❤️ para los amantes de motos y bicicletas</p>
-        </div>
+        <p class="footer-copy">© 2024 La Tribu MotoBike</p>
     </footer>
 </body>
 </html>

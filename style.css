@@ -1,5 +1,6 @@
 * {
-    margin: 0;
+
+    margin: 1;
     padding: 0;
     box-sizing: border-box;
 }
@@ -17,7 +18,7 @@
 }
 
 body {
-    border: 5px solid black;
+    border: 5px solid #ff6b00;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--dark);
     color: var(--text);
